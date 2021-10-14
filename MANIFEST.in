@@ -1,5 +1,15 @@
-include *.rst
-include ez_setup.py
+graft snakeviz
+graft tests
+
+include setup.py
+include setup.cfg
 include LICENSE.txt
-recursive-include snakeviz/static *.ico *.css *.js *.png
-recursive-include snakeviz/templates *.html
+include README.rst
+include MANIFEST.in
+
+include CHANGES.rst
+
+exclude CODE_OF_CONDUCT.md
+prune docs
+
+global-exclude __pycache__ *.py[cod]
